@@ -1,12 +1,20 @@
 <?php 
     require_once  "Debitor.php";
 
+       //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+     //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+       
+
 $debitors = array(
-    //              id, firstname,  lastname,   description,      amount,   deadline
-        new Debitor( 1,  "David",   "Mareš",  "Dluží dost dlouho", 100,       "Teď" ),
-        new Debitor( 2,  "Null",    "Null",   "Bruh",              500,       "24.12.2019"),
-        new Debitor( 2,  "Counter", "Strike", "Global",            900,       "31.1.2002")
+    //              id, firstname,  lastname,   description,      amount,  deadline
+        new Debitor( 1,  "David",   "Mareš",  "Dluží dost dlouho", 100,    "Teď" ),
+        new Debitor( 2,  "Null",    "Null",   "Bruh",              500,    "24.12.2019"),
+        new Debitor( 3,  "Counter", "Strike", "Source",            900,    "31.1.2002")
 );
+
+
+       //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+     //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
 
 ?>
 <!DOCTYPE html>
@@ -23,16 +31,16 @@ $debitors = array(
         </style>
 </head>
 <body>
-<p><b>DEBITOR,  FIRST AND LAST NAME, DESCRIPTION, AMOUNT, DEADLINE.</b></p>
+<p><strong>DEBITOR | FIRST AND LAST NAME | DESCRIPTION | AMOUNT | DEADLINE.</strong></p>
     <?php 
         foreach ($debitors as $debitor) {
             ?>
             
-                <p> Debitor : <?php echo $debitor->getId();?>,
-                            <?php echo $debitor->getFirstName() . " " . $debitor->getLastName();?>,
-                            <?php echo $debitor->getDescription();?>,
-                            <?php echo $debitor->getAmount();?>,
-                            <?php echo $debitor->getDeadline();?>.
+                <p> Debitor : <?php echo $debitor->getId();?> |
+                              <?php echo $debitor->getFirstName() . " " . $debitor->getLastName();?> |
+                              <?php echo $debitor->getDescription();?> |
+                              <?php echo $debitor->getAmount();?> |
+                              <?php echo $debitor->getDeadline();?>.
                           </p>
 
             <?php
